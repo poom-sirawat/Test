@@ -42,14 +42,14 @@
 
             <label for="name">ชื่อ:</label>
             <input type="text" id="name" name="name" required>
-            <label for="phone">ชื่อเล่น:</label>
+            <label for="nickname">ชื่อเล่น:</label>
             <input type="tel" id="nickname" name="nickname" required>
-             <label for="phone">เลชบัตรประชาชน:</label>
+             <label for="idcard">เลชบัตรประชาชน:</label>
             <input type="tel" id="idcard" name="idcard" required>
 
             <label for="phone">เบอร์โทร:</label>
             <input type="tel" id="phone" name="phone" required>
-            <label for="phone">ทะเบียนรถ:</label>
+            <label for="carid">ทะเบียนรถ:</label>
             <input type="tel" id="carid" name="carid" required>
              
 
@@ -87,7 +87,7 @@
                 document.getElementById('profile').style.display = 'block';
 
                 // ตรวจสอบว่าผู้ใช้ลงทะเบียนหรือยัง
-                fetch('YOUR_API_URL?action=getTenantInfo&userId=' + userId)
+                fetch('https://script.google.com/macros/s/AKfycbzdKMzpGiCHZahfnWASVu9wNXdcFeD3VnFWE1uTZ9Ql3uObr00cQWhHKHOduznGqzCx/exec?action=getTenantInfo&userId=' + userId)
                 .then(response => response.json())
                 .then(data => {
                     if (data.success) {
@@ -111,7 +111,7 @@
 
         // ฟังก์ชันดึงห้องที่ลงทะเบียนแล้ว
         function fetchRegisteredRooms() {
-            fetch('YOUR_API_URL?action=getRegisteredRooms')
+            fetch('https://script.google.com/macros/s/AKfycbzdKMzpGiCHZahfnWASVu9wNXdcFeD3VnFWE1uTZ9Ql3uObr00cQWhHKHOduznGqzCx/exec?action=getRegisteredRooms')
             .then(response => response.json())
             .then(registeredRooms => {
                 const roomSelect = document.getElementById('room');
@@ -139,7 +139,7 @@
             const formObj = {};
             formData.forEach((value, key) => formObj[key] = value);
 
-            fetch('YOUR_API_URL?action=registerTenant', {
+            fetch('https://script.google.com/macros/s/AKfycbzdKMzpGiCHZahfnWASVu9wNXdcFeD3VnFWE1uTZ9Ql3uObr00cQWhHKHOduznGqzCx/exec?action=registerTenant', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
