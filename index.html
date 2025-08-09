@@ -87,7 +87,7 @@
                 document.getElementById('profile').style.display = 'block';
 
                 // ตรวจสอบว่าผู้ใช้ลงทะเบียนหรือยัง
-                fetch('https://script.google.com/macros/s/AKfycbzdKMzpGiCHZahfnWASVu9wNXdcFeD3VnFWE1uTZ9Ql3uObr00cQWhHKHOduznGqzCx/exec?action=getTenantInfo&userId=' + userId)
+                fetch('https://script.google.com/macros/s/AKfycbzIgJrLbv_sQjOb3N4cBWuXt2G2QBcjQNgApsaYv7WHkiIwbzvcyFWTdOtBwQAK86xr/exec?action=getTenantInfo&userId=' + userId)
                 .then(response => response.json())
                 .then(data => {
                     if (data.success) {
@@ -111,7 +111,7 @@
 
         // ฟังก์ชันดึงห้องที่ลงทะเบียนแล้ว
         function fetchRegisteredRooms() {
-            fetch('https://script.google.com/macros/s/AKfycbzdKMzpGiCHZahfnWASVu9wNXdcFeD3VnFWE1uTZ9Ql3uObr00cQWhHKHOduznGqzCx/exec?action=getRegisteredRooms')
+            fetch('https://script.google.com/macros/s/AKfycbzIgJrLbv_sQjOb3N4cBWuXt2G2QBcjQNgApsaYv7WHkiIwbzvcyFWTdOtBwQAK86xr/exec?action=getRegisteredRooms')
             .then(response => response.json())
             .then(registeredRooms => {
                 const roomSelect = document.getElementById('room');
@@ -139,7 +139,7 @@
             const formObj = {};
             formData.forEach((value, key) => formObj[key] = value);
 
-            fetch('https://script.google.com/macros/s/AKfycbzdKMzpGiCHZahfnWASVu9wNXdcFeD3VnFWE1uTZ9Ql3uObr00cQWhHKHOduznGqzCx/exec?action=registerTenant', {
+            fetch('https://script.google.com/macros/s/AKfycbzIgJrLbv_sQjOb3N4cBWuXt2G2QBcjQNgApsaYv7WHkiIwbzvcyFWTdOtBwQAK86xr/exec?action=registerTenant', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
