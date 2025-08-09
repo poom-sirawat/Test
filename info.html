@@ -48,7 +48,7 @@
                 const userId = profile.userId;
 
                 // Fetch tenant info
-                fetch('https://script.google.com/macros/s/AKfycbzdKMzpGiCHZahfnWASVu9wNXdcFeD3VnFWE1uTZ9Ql3uObr00cQWhHKHOduznGqzCx/exec?action=getTenantInfo&userId=' + userId) // Replace YOUR_SCRIPT_ID_HERE with your actual Script ID
+                fetch('https://script.google.com/macros/s/AKfycbzIgJrLbv_sQjOb3N4cBWuXt2G2QBcjQNgApsaYv7WHkiIwbzvcyFWTdOtBwQAK86xr/exec?action=getTenantInfo&userId=' + userId) // Replace YOUR_SCRIPT_ID_HERE with your actual Script ID
                 .then(response => response.json())
                 .then(data => {
                     if (data.success) {
@@ -82,7 +82,7 @@
 
         // Fetch invoice data based on userId
         function fetchInvoiceData(userId) {
-            fetch('https://script.google.com/macros/s/AKfycbzdKMzpGiCHZahfnWASVu9wNXdcFeD3VnFWE1uTZ9Ql3uObr00cQWhHKHOduznGqzCx/exec?action=getInvoiceData&userId=' + userId) // Replace YOUR_SCRIPT_ID_HERE with your actual Script ID
+            fetch('https://script.google.com/macros/s/AKfycbzIgJrLbv_sQjOb3N4cBWuXt2G2QBcjQNgApsaYv7WHkiIwbzvcyFWTdOtBwQAK86xr/exec?action=getInvoiceData&userId=' + userId) // Replace YOUR_SCRIPT_ID_HERE with your actual Script ID
             .then(response => response.json())
             .then(invoiceData => {
                 if (invoiceData.success) {
